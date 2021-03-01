@@ -121,9 +121,6 @@
                                                 <p class="starability-result" data-rating="<%=review.rating%>">
                                                     Rated: <%= review.rating %> stars
                                                 </p>
-                                                <h6 class="card-subtitle mb-2 text-muted">By <%=
-                                                        review.author.username%>
-                                                </h6>
                                                 <p class="card-text">Review: <%= review.body %>
                                                 </p>
                                                 <% if( currentUser && review.author.equals(currentUser._id)) {%>
@@ -143,7 +140,7 @@
                 const mapToken = '<%-process.env.MAPBOX_TOKEN%>';
                 // const mapList = '<%- JSON.stringify(list.geometry.coordinates.join()) %>';
                 // const mapList1 = '<%- JSON.stringify(list.geometry) %>';
-                const list = <%- JSON.stringify(list) %> 
+                const list = <% - JSON.stringify(list) %> 
             </script>
 
             <!-- mapToken script needs to run before showPageMap script  -->
