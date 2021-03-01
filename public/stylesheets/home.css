@@ -27,8 +27,15 @@ body {
 
 }
 
-.btn-secondary, .btn-secondary:hover{
+.btn-secondary {
+    background-color: #000;
+    opacity: 1.0;
+    color: #fff;
+}
+
+.btn-secondary:hover{
     color: #333;
+    background-color: rgba(255, 255, 255, 0.5);
     text-shadow: none;
 }
 
