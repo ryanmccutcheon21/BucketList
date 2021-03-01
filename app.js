@@ -171,6 +171,11 @@ app.use((err, req, res, next) => {
     res.status(status).render('error', { err })
 });
 
-app.listen(3000, () => {
-    console.log('serving on port 3000')
+
+// Change the port from 3000 to this to work with Heroku
+// process.env.PORT is available and set by heroku
+// defaults to 3000 if not on Heroku port 
+const port = process.env.PORT || 3000;
+app.listen(port, () => {
+    console.log(`Serving on port ${port}`)
 });
