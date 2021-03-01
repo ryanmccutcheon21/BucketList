@@ -1,5 +1,6 @@
 .carousel-item img {
     max-height: 30rem;
+    width: auto;
     border-radius: .5rem;
   }
 
