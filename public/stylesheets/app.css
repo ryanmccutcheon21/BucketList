@@ -1,11 +1,9 @@
 .carousel-item img {
-    max-height: 30rem;
-    width: auto;
-    border-radius: .5rem;
+    width: 100%;
+    height: 500px;
   }
 
   #map {
-    border-radius: 1rem;
     width: 100%;
     height: 300px;
   }
