@@ -37,15 +37,3 @@ body {
  margin-top: auto;
  margin-bottom: auto;
 }
-
-.nav-link {
-  padding: 0.25rem;
-  font-weight: 700;
-}
-
-
-#view:hover {
-    background-color: white;
-    opacity: 0.7;
-    color:black;
-}
