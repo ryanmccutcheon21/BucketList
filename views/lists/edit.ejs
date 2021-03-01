@@ -1,0 +1,66 @@
+<% layout('layouts/boilerplate')%>
+    <div class="row">
+        <h1 class="text-center">Edit Adventure</h1>
+        <div class="col-md-6 offset-md-3">
+            <form action="/lists/<%=list._id%>?_method=PUT" method="POST" novalidate class="validated-form"
+                enctype="multipart/form-data">
+                <div class="mb-3">
+                    <label class="form-label" for="title">Title: </label>
+                    <input class="form-control" type="text" name="list[title]" id="title" value="<%=list.title%>"
+                        required>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="location">Location: </label>
+                    <input class="form-control" type="text" name="list[location]" id="location"
+                        value="<%=list.location%>" required>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="image">Image: </label>
+                    <input class="form-control" type="file" name="image" id="image" multiple>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="price" class="form-label">Adventure Cost: </label>
+                    <div class="input-group">
+                        <span class="input-group-text" id="price-label">$</span>
+                        <input id="price" type="text" class="form-control" placeholder="0.00" aria-label="price"
+                            aria-describedby="price-label" name="list[price]" value="<%=list.price%>" required>
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label" for="description">Description: </label>
+                    <textarea class="form-control" type="text" name="list[description]" id="description"
+                        required><%=list.description%></textarea>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <% list.images.forEach(function(img, i) { %>
+                        <img src="<%=img.thumbnail%>" alt="" class="img-thumbnail">
+                        <div class="form-check-inline">
+                            <input type="checkbox" name="deleteImages[]" value="<%=img.filename%>" id="image-<%=i%>">
+                            <label for="image-<%=i%>">Delete</label>
+                        </div>
+                        <% }) %>
+                </div>
+                <div class="mb-3">
+                    <button class="btn btn-info">Update Adventure</button>
+                </div>
+            </form>
+            <a href="/lists/<%=list._id%>">Back to Adventure</a>
+
+        </div>
+    </div>

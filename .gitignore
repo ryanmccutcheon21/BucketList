@@ -1,0 +1,7 @@
+# This is for deploying to Heroku, don't pushe node_modules to 
+# Heroku because it will already do that for us. And we are going 
+# to configure the .env environment variables ourself. The .env file 
+# is just for development purposes
+
+node_modules
+.env
