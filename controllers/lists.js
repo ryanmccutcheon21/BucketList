@@ -69,7 +69,7 @@ module.exports.updateAdventure = async (req, res) => {
         // pull from the images array all images where the filename of that image is in req.body.deleteImages array
         await list.updateOne({ $pull: { images: { filename: { $in: req.body.deleteImages } } } })
     }
-    req.flash('success', 'Successfully updated campground!');
+    req.flash('success', 'Successfully updated adventure!');
     res.redirect(`/lists/${list._id}`);
 };
 
