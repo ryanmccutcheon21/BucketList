@@ -39,7 +39,7 @@
         crossorigin="anonymous"></script>
             <script>
                 const mapToken = '<%=process.env.MAPBOX_TOKEN%>';
-                const lists = { features: <%- JSON.stringify(lists) %> };
+                const lists = { features: <% - JSON.stringify(lists) %> };
             </script>
 
             <script src="/js/clusterMap.js"></script>
